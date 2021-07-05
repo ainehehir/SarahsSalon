@@ -1,0 +1,1 @@
+Sarah's beauty app, created with Bootstrap and SASS
