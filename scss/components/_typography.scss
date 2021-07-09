@@ -46,3 +46,13 @@
   margin-bottom: 1rem;
   background-color: $primary;
 }
+
+//right border
+.border-right {
+  border-right: 0;
+
+  @include media-breakpoint-up(sm) {
+    border-right: 0.1rem solid $gray-300;
+    height: 100%;
+  }
+}
