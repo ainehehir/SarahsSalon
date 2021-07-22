@@ -483,6 +483,131 @@
   </div>
 </section>
 
+<!-- portfolio  -->
+<section id="portfolio" class="portfolio">
+  <div class="container">
+    <div class="row text-center mt-5">
+      <h1 class="display-3 fw-bold text-capitalize">Latest work</h1>
+      <div class="heading-line"></div>
+      <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, esse?</p>
+    </div>
+
+    <!-- filter buttons -->
+    <div class="row mt-5 mb-4 g-3 text-center">
+      <div class="col-md-12" id="portfolio-btn">
+        <button type="button" class="btn btn-outline-primary active" onclick="filterSelection('all')">All</button>
+        <button type="button" class="btn btn-outline-primary" onclick="filterSelection('beauty')">Beauty</button>
+        <button type="button" class="btn btn-outline-primary" onclick="filterSelection('nails')">Nials</button>
+        <button type="button" class="btn btn-outline-primary" onclick="filterSelection('hair')">Hair</button>
+     </div>
+    </div>
+
+    <!-- portfolio items -->
+     <div class="row">
+      <!-- <div class="col-lg-4 col-md-6"> -->
+        <div class="portfolio-box nails shadow">
+          <img src="/assets/img/portfolio/portfolio1.jpeg" alt="portfolio 1 image" title="portfolio 1 picture" class="img-fluid">
+          <div class="portfolio-info">
+            <div class="caption">
+              <h4>Manicure</h4>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        </div>
+      <!-- </div> -->
+      <!-- <div class="col-lg-4 col-md-6"> -->
+        <div class="portfolio-box hair shadow">
+          <img src="/assets/img/portfolio/portfolio2.jpeg" alt="portfolio 2 image" title="portfolio 2 picture" class="img-fluid">
+          <div class="portfolio-info">
+            <div class="caption">
+              <h4>Curls no problem</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+          </div>
+        </div>
+      <!-- </div> -->
+      <!-- <div class="col-lg-4 col-md-6"> -->
+        <div class="portfolio-box  beauty shadow">
+          <img src="/assets/img/portfolio/portfolio3.jpeg" alt="portfolio 3 image" title="portfolio 3 picture" class="img-fluid">
+          <div class="portfolio-info">
+            <div class="caption">
+              <h4>Face mask</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+        </div>
+      <!-- </div>
+      <div class="col-lg-4 col-md-6"> -->
+        <div class="portfolio-box nails shadow">
+          <img src="/assets/img/portfolio/portfolio4.jpeg" alt="portfolio 4 image" title="portfolio 4 picture" class="img-fluid">
+          <div class="portfolio-info">
+            <div class="caption">
+              <h4>Nials for everyday</h4>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing.
+              </p>
+            </div>
+          </div>
+        </div>
+      <!-- </div>
+      <div class="col-lg-4 col-md-6"> -->
+        <div class="portfolio-box hair shadow">
+          <img src="/assets/img/portfolio/portfolio5.jpeg" alt="portfolio 5 image" title="portfolio 5 picture" class="img-fluid">
+          <div class="portfolio-info">
+            <div class="caption">
+              <h4>Soft waves</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, facilis.</p>
+            </div>
+          </div>
+        </div>
+      <!-- </div>
+      <div class="col-lg-4 col-md-6"> -->
+        <div class="portfolio-box  beauty shadow">
+          <img src="/assets/img/portfolio/portfolio6.jpeg" alt="portfolio 6 image" title="portfolio 6 picture" class="img-fluid">
+          <div class="portfolio-info">
+            <div class="caption">
+              <h4>Relax</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing.
+              </p>
+            </div>
+          </div>
+        </div>
+      <!-- </div>
+      <div class="col-lg-4 col-md-6"> -->
+        <div class="portfolio-box nails shadow">
+          <img src="/assets/img/portfolio/portfolio7.jpeg" alt="portfolio 7 image" title="portfolio 7 picture" class="img-fluid">
+          <div class="portfolio-info">
+            <div class="caption">
+              <h4>Wide range of colours</h4>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus!</p>
+            </div>
+          </div>
+        </div>
+      <!-- </div>
+      <div class="col-lg-4 col-md-6"> -->
+        <div class="portfolio-box beauty shadow">
+          <img src="/assets/img/portfolio/portfolio8.jpeg" alt="portfolio 8 image" title="portfolio 8 picture" class="img-fluid">
+          <div class="portfolio-info">
+            <div class="caption">
+              <h4>Day or night looks</h4>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste.</p>
+            </div>
+          </div>
+        </div>
+      <!-- </div>
+      <div class="col-lg-4 col-md-6"> -->
+        <div class="portfolio-box beauty shadow">
+          <img src="/assets/img/portfolio/portfolio9.jpeg" alt="portfolio 9 image" title="portfolio 9 picture" class="img-fluid">
+          <div class="portfolio-info">
+            <div class="caption">
+              <h4>Chill</h4>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, amet./p>
+            </div>
+          </div>
+        </div>
+      <!-- </div> -->
+    </div> 
+  </div>
+</section>
 
     
 
@@ -496,6 +621,54 @@
         source: "youtube", //vimeo, youtube or local
         width: 900,
       });
+
+   filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("portfolio-box");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("portfolio-btn");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");0000000000000000000000000000
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+
+
     </script>
     <script src="/assets/js/bootstrap.bundle.js"></script>
   </body>
