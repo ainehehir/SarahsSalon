@@ -10,10 +10,19 @@
 
   button {
     text-transform: capitalize;
+    .btn {
+      .active {
+        font-size: 3rem;
+      }
+    }
   }
 }
 
-.portfolio-box {
+// .btn.active {
+//   font-size: 3rem;
+// }
+
+button.btn.active .portfolio-box {
   position: relative;
   width: 30%;
   height: 18.5rem;

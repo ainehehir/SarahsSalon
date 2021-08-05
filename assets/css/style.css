@@ -11012,8 +11012,11 @@ textarea.form-control-lg {
 .portfolio button {
   text-transform: capitalize;
 }
+.portfolio button .btn .active {
+  font-size: 3rem;
+}
 
-.portfolio-box {
+button.btn.active .portfolio-box {
   position: relative;
   width: 30%;
   height: 18.5rem;
@@ -11022,14 +11025,14 @@ textarea.form-control-lg {
   border-top: 0.5rem solid #c685f7;
   display: none;
 }
-.portfolio-box.show {
+button.btn.active .portfolio-box.show {
   display: block;
 }
-.portfolio-box img {
+button.btn.active .portfolio-box img {
   width: 100%;
   height: 100%;
 }
-.portfolio-box .portfolio-info {
+button.btn.active .portfolio-box .portfolio-info {
   background-color: rgba(153, 38, 240, 0.75);
   width: 100%;
   height: 100%;
@@ -11039,7 +11042,7 @@ textarea.form-control-lg {
   opacity: 0;
   visibility: hidden;
 }
-.portfolio-box .portfolio-info .caption {
+button.btn.active .portfolio-box .portfolio-info .caption {
   text-align: center;
   color: #fff;
   position: absolute;
@@ -11047,16 +11050,16 @@ textarea.form-control-lg {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.portfolio-box .portfolio-info .caption h4 {
+button.btn.active .portfolio-box .portfolio-info .caption h4 {
   text-transform: uppercase;
   display: block;
 }
-.portfolio-box:hover img {
+button.btn.active .portfolio-box:hover img {
   transform: scale(1.5);
   transition-property: all;
   transition-duration: 1s;
 }
-.portfolio-box:hover .portfolio-info {
+button.btn.active .portfolio-box:hover .portfolio-info {
   opacity: 1;
   visibility: visible;
   transition-property: all;
@@ -11100,6 +11103,96 @@ textarea.form-control-lg {
   color: #fff;
   text-decoration: none;
   text-transform: capitalize;
+}
+
+.footer {
+  padding-top: 1rem;
+  background-color: #151414;
+}
+
+.contact-box {
+  position: relative;
+}
+.contact-box__icon {
+  width: 2rem;
+  stroke: #9926f0;
+  padding-top: 0.5rem;
+}
+@media (min-width: 576px) {
+  .contact-box__icon {
+    width: 4rem;
+  }
+}
+.contact-box__info {
+  padding: 0.4rem;
+  font-weight: 600;
+}
+.contact-box__info--title {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+@media (min-width: 576px) {
+  .contact-box__info--title {
+    font-size: 1.44rem;
+  }
+}
+.contact-box__info--subtitle {
+  color: #6c757d;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+@media (min-width: 576px) {
+  .contact-box__info--subtitle {
+    font-size: 1rem;
+  }
+}
+
+.footer-sm a {
+  color: #fff;
+}
+.footer-sm a i {
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+@media (min-width: 576px) {
+  .footer-sm a i {
+    font-size: 1.6rem;
+  }
+}
+
+.company-list {
+  display: block;
+  list-style-type: none;
+  position: relative;
+}
+.company-list li {
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+}
+.company-list li a {
+  color: #fff;
+  text-decoration: none;
+}
+.company-list li a:hover {
+  color: #9926f0;
+}
+
+.back-to-top {
+  position: fixed;
+  width: 3rem;
+  height: 3rem;
+  right: 1.875rem;
+  bottom: 1.875rem;
+  z-index: 9999;
+}
+.back-to-top i {
+  color: #fff;
+  font-size: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*# sourceMappingURL=style.css.map */
