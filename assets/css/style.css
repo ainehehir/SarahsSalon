@@ -11012,27 +11012,20 @@ textarea.form-control-lg {
 .portfolio button {
   text-transform: capitalize;
 }
-.portfolio button .btn .active {
-  font-size: 3rem;
-}
 
-button.btn.active .portfolio-box {
+.portfolio-box {
   position: relative;
   width: 30%;
   height: 18.5rem;
   overflow: hidden;
   margin-bottom: 1.2rem;
   border-top: 0.5rem solid #c685f7;
-  display: none;
 }
-button.btn.active .portfolio-box.show {
-  display: block;
-}
-button.btn.active .portfolio-box img {
+.portfolio-box img {
   width: 100%;
   height: 100%;
 }
-button.btn.active .portfolio-box .portfolio-info {
+.portfolio-box .portfolio-info {
   background-color: rgba(153, 38, 240, 0.75);
   width: 100%;
   height: 100%;
@@ -11042,7 +11035,7 @@ button.btn.active .portfolio-box .portfolio-info {
   opacity: 0;
   visibility: hidden;
 }
-button.btn.active .portfolio-box .portfolio-info .caption {
+.portfolio-box .portfolio-info .caption {
   text-align: center;
   color: #fff;
   position: absolute;
@@ -11050,16 +11043,16 @@ button.btn.active .portfolio-box .portfolio-info .caption {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-button.btn.active .portfolio-box .portfolio-info .caption h4 {
+.portfolio-box .portfolio-info .caption h4 {
   text-transform: uppercase;
   display: block;
 }
-button.btn.active .portfolio-box:hover img {
+.portfolio-box:hover img {
   transform: scale(1.5);
   transition-property: all;
   transition-duration: 1s;
 }
-button.btn.active .portfolio-box:hover .portfolio-info {
+.portfolio-box:hover .portfolio-info {
   opacity: 1;
   visibility: visible;
   transition-property: all;

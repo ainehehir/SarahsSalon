@@ -1,3 +1,7 @@
+<!-- sarah's salon app
+      provides information on sarah's salom such as services provided, brands, customer testimonials, portfolio of work 
+      build using html, sass, javascript, fontawesome, glightbox-->
+  
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -117,6 +121,8 @@
           </div>
         </div>
       </div>
+
+      <!-- svg of a wave -->
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -401,10 +407,8 @@
   <button class="btn btn-outline-light fas fa-long-arrow-alt-left" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev"></button>
   <button class="btn btn-outline-light fas fa-long-arrow-alt-right" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
   </button>
-  </div>
-
 </div>
-
+</div>
     </div>
   </div>
 
@@ -495,17 +499,17 @@
     <!-- filter buttons -->
     <div class="row mt-5 mb-4 g-3 text-center">
       <div class="col-md-12" id="portfolio-btn">
-        <button type="button" class="btn active" onclick="filterSelection('all')">All</button>
-        <button type="button" class="btn" onclick="filterSelection('beauty')">Beauty</button>
-        <button type="button" class="btn" onclick="filterSelection('nails')">Nials</button>
-        <button type="button" class="btn" onclick="filterSelection('hair')">Hair</button>
+        <button type="button" class="btn" data-filter="all">All</button>
+        <button type="button" class="btn" data-filter="beauty" >Beauty</button>
+        <button type="button" class="btn" data-filter="nails" >Nails</button>
+        <button type="button" class="btn" data-filter="hair" >Hair</button>
      </div>
     </div>
 
     <!-- portfolio items -->
      <div class="row">
       <!-- <div class="col-lg-4 col-md-6"> -->
-        <div class="portfolio-box nails shadow">
+        <div class="portfolio-box shadow nails">
           <img src="/assets/img/portfolio/portfolio1.jpeg" alt="portfolio 1 image" title="portfolio 1 picture" class="img-fluid">
           <div class="portfolio-info">
             <div class="caption">
@@ -516,7 +520,7 @@
         </div>
       <!-- </div> -->
       <!-- <div class="col-lg-4 col-md-6"> -->
-        <div class="portfolio-box hair shadow">
+        <div class="portfolio-box shadow hair">
           <img src="/assets/img/portfolio/portfolio2.jpeg" alt="portfolio 2 image" title="portfolio 2 picture" class="img-fluid">
           <div class="portfolio-info">
             <div class="caption">
@@ -527,7 +531,7 @@
         </div>
       <!-- </div> -->
       <!-- <div class="col-lg-4 col-md-6"> -->
-        <div class="portfolio-box  beauty shadow">
+        <div class="portfolio-box beauty shadow">
           <img src="/assets/img/portfolio/portfolio3.jpeg" alt="portfolio 3 image" title="portfolio 3 picture" class="img-fluid">
           <div class="portfolio-info">
             <div class="caption">
@@ -538,11 +542,11 @@
         </div>
       <!-- </div>
       <div class="col-lg-4 col-md-6"> -->
-        <div class="portfolio-box nails shadow">
+        <div class="portfolio-box nails">
           <img src="/assets/img/portfolio/portfolio4.jpeg" alt="portfolio 4 image" title="portfolio 4 picture" class="img-fluid">
           <div class="portfolio-info">
             <div class="caption">
-              <h4>Nials for everyday</h4>
+              <h4>Nails for everyday</h4>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing.
               </p>
             </div>
@@ -550,7 +554,7 @@
         </div>
       <!-- </div>
       <div class="col-lg-4 col-md-6"> -->
-        <div class="portfolio-box hair shadow">
+        <div class="portfolio-box shadow hair">
           <img src="/assets/img/portfolio/portfolio5.jpeg" alt="portfolio 5 image" title="portfolio 5 picture" class="img-fluid">
           <div class="portfolio-info">
             <div class="caption">
@@ -561,7 +565,7 @@
         </div>
       <!-- </div>
       <div class="col-lg-4 col-md-6"> -->
-        <div class="portfolio-box  beauty shadow">
+        <div class="portfolio-box shadow beauty">
           <img src="/assets/img/portfolio/portfolio6.jpeg" alt="portfolio 6 image" title="portfolio 6 picture" class="img-fluid">
           <div class="portfolio-info">
             <div class="caption">
@@ -573,7 +577,7 @@
         </div>
       <!-- </div>
       <div class="col-lg-4 col-md-6"> -->
-        <div class="portfolio-box nails shadow">
+        <div class="portfolio-box shadow nails">
           <img src="/assets/img/portfolio/portfolio7.jpeg" alt="portfolio 7 image" title="portfolio 7 picture" class="img-fluid">
           <div class="portfolio-info">
             <div class="caption">
@@ -584,7 +588,7 @@
         </div>
       <!-- </div>
       <div class="col-lg-4 col-md-6"> -->
-        <div class="portfolio-box beauty shadow">
+        <div class="portfolio-box shadow hair">
           <img src="/assets/img/portfolio/portfolio8.jpeg" alt="portfolio 8 image" title="portfolio 8 picture" class="img-fluid">
           <div class="portfolio-info">
             <div class="caption">
@@ -595,7 +599,7 @@
         </div>
       <!-- </div>
       <div class="col-lg-4 col-md-6"> -->
-        <div class="portfolio-box beauty shadow">
+        <div class="portfolio-box shadow beauty">
           <img src="/assets/img/portfolio/portfolio9.jpeg" alt="portfolio 9 image" title="portfolio 9 picture" class="img-fluid">
           <div class="portfolio-info">
             <div class="caption">
@@ -743,7 +747,7 @@
         <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
         <ul class="list-inline company-list">
           <li><a href="#">Hair</a></li>
-          <li><a href="#">Nials</a></li>
+          <li><a href="#">Nails</a></li>
           <li><a href="#">Beauty</a></li>
           
         </ul>
@@ -777,69 +781,43 @@
   <i class="fas fa-chevron-up"></i>
 </a>
 
-
-
     
-
-    
-    <script src="/assets/vendors/js/glightbox.min.js"></script>
-    <script type="text/javascript">
+<script src="/assets/vendors/js/glightbox.min.js"></script>
+<script type="text/javascript">
     // setting for glightbox
     const lightbox = GLightbox({
         href: "https://youtu.be/ScMzIvxBSi4",
         type: "video",
         source: "youtube", //vimeo, youtube or local
         width: 900,
-      });
-
-filterSelection("all");
-function filterSelection(c) {
-  var x, i;
-  x = document.querySelectorAll(".portfolio-box");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
-
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
-
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);     
-    }
-  }
-  element.className = arr1.join(" ");
-}
+    });
 
 
-// Add active class to the current button (highlight it)
-var btnContainer = document.querySelector("#portfolio-btn");
-var btns = btnContainer.querySelectorAll(".btn");
-for (var i = 0, len = btns.length; i < len; ++ i){
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    console.log(current);
-    current[i].className = current[i].className.replace("active", "");
-    this.className += "active";
-  });
-}
+
+// filter portfolio
+document.addEventListener('DOMContentLoaded',function(){ 
+  const btnContainer = document.querySelector("#portfolio-btn");
+  const btns = btnContainer.querySelectorAll(".btn");
+  btns.forEach(btn => btn.addEventListener('click', function(e){
+   const filter = e.target.getAttribute('data-filter');
+   let elements = document.getElementsByClassName("portfolio-box");
+  
+
+ for(let i = 0; i < elements.length; i++){
+if((filter == "all") || (elements[i].classList.contains(filter))) {
+ elements[i].style.display = "none";
+ elements[i].style.display = "block";
+  } 
+  else {
+  elements[i].style.display = "none";
+ }
+ }
+  
+}))
+
+})
+
 </script>
-
-
-
     </script>
     <script src="/assets/js/bootstrap.bundle.js"></script>
   </body>
